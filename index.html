@@ -80,6 +80,14 @@
             transition: all 0.4s ease;
         }
 
+        /* Neumorphic Dark Card with Red Glow on Hover */
+        .red-glass-card {
+            background: rgba(25, 0, 0, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(227, 168, 39, 0.25);
+            transition: all 0.4s ease;
+        }
+
         .gold-glass-card:hover {
             border-color: rgba(227, 168, 39, 0.7);
             box-shadow: 0 10px 35px -5px rgba(227, 168, 39, 0.3);
@@ -416,7 +424,7 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
                 
                 <!-- FACTURACIÓN ACTUAL -->
-                <div class="gold-glass-card rounded-3xl p-8 border border-red-500/30 space-y-6">
+                <div class="red-glass-card rounded-3xl p-8 border border-red-500/30 space-y-6">
                     <div class="flex justify-between items-center border-b border-white/10 pb-4">
                         <h3 class="text-xl font-extrabold text-white uppercase tracking-wider font-sans">
                             FACTURACIÓN ACTUAL
