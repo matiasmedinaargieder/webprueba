@@ -235,10 +235,15 @@
         </div>
     </section>
 
-    <!-- Banner Cargadores en Descuento (Ancho Completo) -->
+    <!-- Banner Responsivo (Diferente imagen en PC y Celular, ambos con enlace a WhatsApp) -->
     <section class="relative z-10 w-full border-t border-b border-gold/20 overflow-hidden">
-        <a href="https://wa.me/34604113451" target="_blank" rel="noopener noreferrer" class="block w-full group">
+        <!-- Imagen para PC / Escritorio -->
+        <a href="https://wa.me/34604113451" target="_blank" rel="noopener noreferrer" class="hidden md:block w-full group">
             <img src="cargadores-en-descuento.jpg" alt="Cargadores en descuento - Contactar por WhatsApp" class="w-full h-auto block object-cover transition-transform duration-500 group-hover:scale-[1.01]">
+        </a>
+        <!-- Imagen para Celular / Móvil -->
+        <a href="https://wa.me/34604113451" target="_blank" rel="noopener noreferrer" class="block md:hidden w-full group">
+            <img src="descuento-cargadores.jpg" alt="Descuento cargadores - Contactar por WhatsApp" class="w-full h-auto block object-cover transition-transform duration-500 group-hover:scale-[1.01]">
         </a>
     </section>
 
