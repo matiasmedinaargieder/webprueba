@@ -6,10 +6,10 @@
     <title>Argieder | Asesoría Energética Tecnológica</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts: Montserrat & Inter -->
+    <!-- Google Fonts: Montserrat & Inter (incluyendo peso 900 para el trazo más grueso) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
@@ -84,7 +84,7 @@
             backdrop-filter: blur(12px);
             border: 1px solid rgba(227, 168, 39, 0.25);
             transition: all 0.4s ease;
-          }
+        }
 
         .green-glass-card {
             background: rgba(21, 82, 0, 0.55);
@@ -109,7 +109,7 @@
     <!-- Background Dynamic Particle Mesh Canvas -->
     <canvas id="canvas-matrix" class="fixed inset-0 pointer-events-none z-0 opacity-40"></canvas>
 
-   <!-- Header -->
+    <!-- Header -->
     <header class="fixed top-0 left-0 w-full z-50 bg-darkBg/80 backdrop-blur-md border-b border-gold/20 px-4 lg:px-8 py-3.5 transition-all">
         <div class="max-w-7xl mx-auto flex justify-between items-center gap-2">
             
@@ -156,8 +156,76 @@
         </div>
     </header>
 
-    <!-- Sección Hero -->
-    <section id="inicio" class="relative pt-36 pb-20 md:pt-44 md:pb-32 px-6 overflow-hidden z-10">
+    <!-- NUEVO BLOQUE LANDING: Contacto Rápido y Contador de Ahorro -->
+    <section id="landing-ahorro" class="relative pt-36 pb-16 md:pt-44 md:pb-24 px-6 overflow-hidden z-10 border-b border-gold/20">
+        <div class="max-w-6xl mx-auto">
+            <div class="gold-glass-card rounded-3xl p-8 md:p-14 border border-gold/40 shadow-glow-gold relative overflow-hidden">
+                
+                <!-- Fila Superior: Texto a la izquierda y Contador a la derecha -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                    
+                    <!-- Izquierda: Texto en mayúsculas e Inter Black (900) -->
+                    <div class="lg:col-span-7 text-center lg:text-left">
+                        <h2 class="font-body font-black uppercase text-4xl sm:text-5xl md:text-6xl tracking-tight text-white leading-[1.08]">
+                            QUIERO AHORRAR <br class="hidden sm:inline">
+                            CON <span class="text-transparent bg-clip-text bg-gradient-to-r from-gold-light via-gold to-gold-amber text-glow-gold">ARGIEDER</span>
+                        </h2>
+                    </div>
+
+                    <!-- Derecha: Contador animado de €312 a €231 y lo que se ahorra -->
+                    <div class="lg:col-span-5 flex flex-col items-center lg:items-end justify-center">
+                        <div class="w-full max-w-sm rounded-2xl bg-black/70 border border-gold/30 p-6 text-center shadow-2xl">
+                            <span class="block text-xs font-body uppercase tracking-widest text-slate-400 mb-1">
+                                Tu factura mensual
+                            </span>
+                            
+                            <div class="flex items-baseline justify-center gap-1 my-1">
+                                <span id="counter-price" class="font-body font-black text-5xl sm:text-6xl text-emerald-400 tabular-nums transition-colors duration-300">
+                                    €312
+                                </span>
+                                <span class="text-sm text-slate-400 font-body">/mes</span>
+                            </div>
+
+                            <!-- Indicador dinámico de ahorro -->
+                            <div class="mt-3 inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/15 border border-emerald-500/40 text-emerald-400 text-xs sm:text-sm font-body font-semibold">
+                                <i class="fa-solid fa-arrow-trend-down"></i>
+                                <span>Ahorras <strong id="counter-saved">€0</strong>/mes (<span id="counter-saved-year">€0</span>/año)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Separador sutil -->
+                <div class="w-full h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent my-8 md:my-10"></div>
+
+                <!-- Parte Inferior Centrada: Texto "Contáctanos ahora" y Botones -->
+                <div class="flex flex-col items-center text-center space-y-5">
+                    <p class="font-body font-normal text-lg md:text-xl text-slate-200">
+                        Contáctanos ahora
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
+                        <!-- Botón Llámanos -->
+                        <a href="tel:+34943227623" class="w-full sm:w-auto min-w-[200px] px-8 py-4 rounded-xl bg-gradient-to-r from-gold via-gold-amber to-gold-dark text-slate-950 font-body font-extrabold text-base shadow-glow-gold hover:scale-105 hover:opacity-95 transition-all duration-300 flex items-center justify-center gap-3">
+                            <i class="fa-solid fa-phone"></i>
+                            <span>Llámanos</span>
+                        </a>
+
+                        <!-- Botón WhatsApp -->
+                        <a href="https://wa.me/34675867733" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto min-w-[200px] px-8 py-4 rounded-xl bg-emerald-500/15 border border-emerald-500/50 text-emerald-400 font-body font-extrabold text-base hover:bg-emerald-500 hover:text-slate-950 hover:shadow-glow-green hover:scale-105 transition-all duration-300 flex items-center justify-center gap-3">
+                            <i class="fa-brands fa-whatsapp text-xl"></i>
+                            <span>WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Hero (Anterior primer bloque) -->
+    <section id="inicio" class="relative pt-20 pb-20 md:pt-28 md:pb-32 px-6 overflow-hidden z-10">
         <div class="max-w-4xl mx-auto flex flex-col items-center text-center space-y-8">
             
             <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gold/10 border border-gold/40 text-gold text-xs font-semibold tracking-wider uppercase shadow-glow-gold">
@@ -482,7 +550,7 @@
                             </div>
                         </div>
 
-                         <div>
+                        <div>
                             <div class="flex justify-between text-xs text-slate-200 font-bold mb-1">
                                 <span>AHORRANDO CON ARGIEDER</span>
                                 <span class="text-emerald-400">50% DE AHORRO</span>
@@ -828,6 +896,33 @@
 
     <!-- Scripts -->
     <script>
+        // Animación del contador de ahorro (€312 bajando de uno en uno hasta €231)
+        function startSavingsCounter() {
+            const priceEl = document.getElementById('counter-price');
+            const savedEl = document.getElementById('counter-saved');
+            const savedYearEl = document.getElementById('counter-saved-year');
+            if (!priceEl || !savedEl || !savedYearEl) return;
+
+            const startValue = 312;
+            const endValue = 231;
+            let currentValue = startValue;
+
+            // Breve pausa de 400ms al cargar para que el usuario perciba el €312 inicial
+            setTimeout(() => {
+                const interval = setInterval(() => {
+                    if (currentValue > endValue) {
+                        currentValue--;
+                        const saved = startValue - currentValue;
+                        priceEl.textContent = `€${currentValue}`;
+                        savedEl.textContent = `€${saved}`;
+                        savedYearEl.textContent = `€${saved * 12}`;
+                    } else {
+                        clearInterval(interval);
+                    }
+                }, 25); // Velocidad fluida de 25ms por cada euro que baja
+            }, 400);
+        }
+
         const canvas = document.getElementById('canvas-matrix');
         const ctx = canvas.getContext('2d');
         let particles = [];
@@ -902,6 +997,7 @@
         window.onload = function() {
             resizeCanvas();
             animateCanvas();
+            startSavingsCounter();
         };
         window.addEventListener('resize', resizeCanvas);
 
