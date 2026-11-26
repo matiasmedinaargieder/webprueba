@@ -156,16 +156,16 @@
         </div>
     </header>
 
-    <!-- NUEVO BLOQUE PRINCIPAL (Libre, sin caja contenedora general ni caja oscura en el número) -->
+    <!-- NUEVO BLOQUE PRINCIPAL (Centrado, más grande, separado por línea difuminada) -->
     <section id="landing-ahorro" class="relative pt-36 pb-20 md:pt-44 md:pb-28 px-6 overflow-hidden z-10 border-b border-gold/20">
-        <div class="max-w-6xl mx-auto">
+        <div class="max-w-5xl mx-auto">
             
-            <!-- Contenido principal: Dos columnas -->
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <!-- Contenido principal: Dos columnas perfectamente centradas con línea difuminada en medio -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center justify-center">
                 
-                <!-- Izquierda: Título en Mayúsculas e Inter Black (900) -->
-                <div class="lg:col-span-7 text-center lg:text-left">
-                    <h2 class="font-body font-black uppercase text-4xl sm:text-5xl md:text-6xl tracking-tight text-white leading-[1.08]">
+                <!-- Izquierda: Título más grande en Mayúsculas e Inter Black (900) -->
+                <div class="lg:col-span-6 text-center lg:text-left flex flex-col justify-center">
+                    <h2 class="font-body font-black uppercase text-5xl sm:text-6xl md:text-7xl tracking-tighter text-white leading-[1.05]">
                         QUIERO <br>
                         AHORRAR <br>
                         CON <br>
@@ -173,21 +173,26 @@
                     </h2>
                 </div>
 
+                <!-- Línea difuminada divisoria (Vertical en PC, Horizontal en Móvil) -->
+                <div class="lg:col-span-1 flex items-center justify-center py-4 lg:py-0">
+                    <div class="w-32 h-px lg:w-px lg:h-48 bg-gradient-to-b lg:bg-gradient-to-b from-transparent via-gold/60 to-transparent"></div>
+                </div>
+
                 <!-- Derecha: Tu factura mensual y contador libre de €438 a €219 -->
-                <div class="lg:col-span-5 flex flex-col items-center lg:items-end justify-center">
-                    <div class="w-full max-w-sm text-center lg:text-right space-y-3">
-                        <span class="block text-xs font-body uppercase tracking-widest text-slate-400">
+                <div class="lg:col-span-5 flex flex-col items-center lg:items-start justify-center text-center lg:text-left">
+                    <div class="w-full space-y-3">
+                        <span class="block text-xs md:text-sm font-body uppercase tracking-widest text-slate-400">
                             TU FACTURA MENSUAL
                         </span>
                         
-                        <div class="flex items-baseline justify-center lg:justify-end gap-1">
-                            <span id="counter-price" class="font-body font-black text-6xl sm:text-7xl text-emerald-400 tabular-nums transition-colors duration-300">
+                        <div class="flex items-baseline justify-center lg:justify-start gap-1">
+                            <span id="counter-price" class="font-body font-black text-6xl sm:text-7xl md:text-8xl text-emerald-400 tabular-nums transition-colors duration-300">
                                 €438
                             </span>
-                            <span class="text-sm text-slate-400 font-body">/mes</span>
+                            <span class="text-sm md:text-base text-slate-400 font-body">/mes</span>
                         </div>
 
-                        <div class="pt-1 flex justify-center lg:justify-end">
+                        <div class="pt-2 flex justify-center lg:justify-start">
                             <div class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full border border-emerald-500/50 text-emerald-400 text-xs sm:text-sm font-body font-semibold bg-emerald-500/10">
                                 <span>Ahorra hasta un 50%</span>
                             </div>
@@ -197,7 +202,7 @@
 
             </div>
 
-            <!-- Separador sutil -->
+            <!-- Separador sutil horizontal -->
             <div class="w-full h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent my-12"></div>
 
             <!-- Zona Inferior: Contáctanos ahora y botones -->
