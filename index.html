@@ -156,15 +156,15 @@
         </div>
     </header>
 
-    <!-- NUEVO BLOQUE PRINCIPAL (Centrado, más grande, separado por línea difuminada) -->
+    <!-- NUEVO BLOQUE PRINCIPAL (Línea divisoria en la mitad exacta, simétrico 50/50) -->
     <section id="landing-ahorro" class="relative pt-36 pb-20 md:pt-44 md:pb-28 px-6 overflow-hidden z-10 border-b border-gold/20">
         <div class="max-w-5xl mx-auto">
             
-            <!-- Contenido principal: Dos columnas perfectamente centradas con línea difuminada en medio -->
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center justify-center">
+            <!-- Contenido principal dividido en 6 y 6 columnas exactas con línea divisoria centrada -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-0 items-center">
                 
-                <!-- Izquierda: Título más grande en Mayúsculas e Inter Black (900) -->
-                <div class="lg:col-span-6 text-center lg:text-left flex flex-col justify-center">
+                <!-- Izquierda: Título (6 columnas, con padding derecho y borde derecho simulando la línea centrada) -->
+                <div class="lg:col-span-6 text-center lg:text-left flex flex-col justify-center lg:pr-12 lg:border-r lg:border-gold/30">
                     <h2 class="font-body font-black uppercase text-5xl sm:text-6xl md:text-7xl tracking-tighter text-white leading-[1.05]">
                         QUIERO <br>
                         AHORRAR <br>
@@ -173,13 +173,8 @@
                     </h2>
                 </div>
 
-                <!-- Línea difuminada divisoria (Vertical en PC, Horizontal en Móvil) -->
-                <div class="lg:col-span-1 flex items-center justify-center py-4 lg:py-0">
-                    <div class="w-32 h-px lg:w-px lg:h-48 bg-gradient-to-b lg:bg-gradient-to-b from-transparent via-gold/60 to-transparent"></div>
-                </div>
-
-                <!-- Derecha: Tu factura mensual y contador libre de €438 a €219 -->
-                <div class="lg:col-span-5 flex flex-col items-center lg:items-start justify-center text-center lg:text-left">
+                <!-- Derecha: Tu factura mensual y contador (6 columnas simétricas, con padding izquierdo) -->
+                <div class="lg:col-span-6 flex flex-col items-center lg:items-start justify-center text-center lg:text-left mt-10 lg:mt-0 lg:pl-12">
                     <div class="w-full space-y-3">
                         <span class="block text-xs md:text-sm font-body uppercase tracking-widest text-slate-400">
                             TU FACTURA MENSUAL
