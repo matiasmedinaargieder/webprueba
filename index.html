@@ -730,10 +730,18 @@
                         <textarea name="mensaje" rows="4" placeholder="Indícanos si eres particular o empresa y en qué podemos ayudarte..." class="w-full bg-black/80 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-gold transition-all"></textarea>
                     </div>
 
-                    <!-- Texto de Protección de Datos (Añadido) -->
+                    <!-- Texto de Protección de Datos -->
                     <p class="text-[11px] leading-relaxed text-slate-400 text-justify">
                         ARGIEDER GESTION, S.L., como responsable del tratamiento, le informa que sus datos son recabados con la finalidad de: atender las consultas realizadas. La base jurídica para el tratamiento es el consentimiento del interesado. Sus datos no se cederán a terceros salvo obligación legal. Cualquier persona tiene derecho a solicitar el acceso, rectificación, supresión, limitación del tratamiento, oposición o derecho a la portabilidad de sus datos personales, escribiéndonos a la dirección de nuestras oficinas, o enviando un correo electrónico a <a href="mailto:administracion@argieder.es" class="text-gold hover:underline">administracion@argieder.es</a>, indicando el derecho que desea ejercer. Puede obtener información adicional en el apartado de <a href="privacidad.html" class="text-gold font-semibold hover:underline">POLÍTICA DE PRIVACIDAD</a>.
                     </p>
+
+                    <!-- Casilla de aceptación obligatoria -->
+                    <div class="flex items-center gap-2 pt-1">
+                        <input type="checkbox" id="privacidadCheck" required class="w-4 h-4 rounded border-white/20 bg-black/80 text-gold focus:ring-gold accent-[#E3A827] cursor-pointer">
+                        <label for="privacidadCheck" class="text-xs text-slate-300 cursor-pointer select-none">
+                            He leído y estoy de acuerdo con la <a href="privacidad.html" class="text-gold font-semibold hover:underline">Política de Privacidad</a>
+                        </label>
+                    </div>
 
                     <button type="submit" id="submitBtn" class="w-full py-4 rounded-xl bg-gradient-to-r from-gold via-gold-amber to-gold-dark text-slate-950 font-black uppercase tracking-wider text-sm hover:shadow-glow-gold hover:scale-[1.01] transition-all">
                         Enviar Solicitud
